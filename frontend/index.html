@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071b19">
+  <meta name="description" content="Sentinel Habitat: plataforma de inteligencia y análisis ambiental.">
+  <title>Sentinel Habitat | Environmental Intelligence</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#">
+        <div class="brand-mark">S</div>
+        <div>
+          <strong>SENTINEL</strong>
+          <span>HABITAT INTELLIGENCE</span>
+        </div>
+      </a>
+
+      <div class="nav-label">PLATFORM</div>
+      <nav class="navigation">
+        <button class="nav-item active" data-view="overview">
+          <span>◫</span> Overview
+        </button>
+        <button class="nav-item" data-view="fire">
+          <span>♨</span> Sentinel Fire
+        </button>
+        <button class="nav-item" data-view="water">
+          <span>≈</span> Sentinel Water
+        </button>
+        <button class="nav-item" data-view="biodiversity">
+          <span>❋</span> Biodiversity
+        </button>
+        <button class="nav-item" data-view="seismic">
+          <span>⌁</span> Seismic
+        </button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="connection">
+          <span class="status-dot"></span>
+          <div>
+            <strong>AI ENGINE</strong>
+            <small id="engine-status">Checking connection...</small>
+          </div>
+        </div>
+        <div class="sidebar-version">SENTINEL HABITAT · DEMO 0.1</div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">ENVIRONMENTAL INTELLIGENCE PLATFORM</div>
+          <h1 id="page-title">Environmental overview</h1>
+        </div>
+        <div class="topbar-right">
+          <span class="live-indicator"><i></i> DEMO ENVIRONMENT</span>
+          <div class="avatar">SH</div>
+        </div>
+      </header>
+
+      <section class="view active" id="view-overview">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="hero-tag"><span></span> ONE PLATFORM · FOUR ENVIRONMENTAL DOMAINS</div>
+            <h2>Understand the signals.<br><em>Protect what matters.</em></h2>
+            <p>Environmental intelligence designed to transform risk indicators into understandable insights and informed action.</p>
+            <button class="primary-button" data-go="fire">Explore risk analysis <span>→</span></button>
+          </div>
+          <div class="hero-graphic" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="orbit orbit-three"></div>
+            <div class="planet">S</div>
+            <div class="orbit-label label-top">OBSERVE</div>
+            <div class="orbit-label label-bottom">UNDERSTAND</div>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">INTELLIGENCE MODULES</div>
+            <h2>Environmental domains</h2>
+          </div>
+          <span class="section-note">04 MODULES</span>
+        </div>
+
+        <div class="module-grid">
+          <article class="module-card fire-card">
+            <div class="module-top"><span class="module-icon">♨</span><span class="module-state active-state">ANALYSIS AVAILABLE</span></div>
+            <h3>Sentinel Fire</h3>
+            <p>Preliminary wildfire risk assessment using temperature, humidity, wind and rainfall indicators.</p>
+            <button class="text-button" data-go="fire">Open module <span>→</span></button>
+          </article>
+
+          <article class="module-card water-card">
+            <div class="module-top"><span class="module-icon">≈</span><span class="module-state active-state">ANALYSIS AVAILABLE</span></div>
+            <h3>Sentinel Water</h3>
+            <p>Preliminary water risk assessment using water level, rainfall and turbidity indicators.</p>
+            <button class="text-button" data-go="water">Open module <span>→</span></button>
+          </article>
+
+          <article class="module-card bio-card">
+            <div class="module-top"><span class="module-icon">❋</span><span class="module-state prototype-state">PROTOTYPE</span></div>
+            <h3>Sentinel Biodiversity</h3>
+            <p>Planned ecosystem monitoring and environmental change analysis using geospatial evidence.</p>
+            <button class="text-button" data-go="biodiversity">Explore module <span>→</span></button>
+          </article>
+
+          <article class="module-card seismic-card">
+            <div class="module-top"><span class="module-icon">⌁</span><span class="module-state prototype-state">PROTOTYPE</span></div>
+            <h3>Sentinel Seismic</h3>
+            <p>Planned seismic signal analysis and situational awareness after an earthquake begins.</p>
+            <button class="text-button" data-go="seismic">Explore module <span>→</span></button>
+          </article>
+        </div>
+
+        <div class="section-heading history-heading">
+          <div>
+            <div class="eyebrow">RECENT ACTIVITY</div>
+            <h2>Analysis history</h2>
+          </div>
+          <span class="section-note" id="history-count">0 RECORDS</span>
+        </div>
+        <div class="history-panel" id="history-list">
+          <div class="empty-state">Your analysis history will appear here.</div>
+        </div>
+      </section>
+
+      <section class="view" id="view-fire">
+        <div class="module-intro">
+          <div class="module-icon large fire-icon">♨</div>
+          <div>
+            <div class="eyebrow">ENVIRONMENTAL RISK MODULE / 01</div>
+            <h2>Sentinel Fire</h2>
+            <p>Explore preliminary wildfire risk indicators.</p>
+          </div>
+          <span class="module-state active-state">ANALYSIS AVAILABLE</span>
+        </div>
+
+        <div class="analysis-layout">
+          <div class="form-panel">
+            <div class="panel-heading"><h3>Environmental inputs</h3><span>USER-SUPPLIED DATA</span></div>
+            <form id="fire-form">
+              <label>Temperature <span>°C</span><input type="number" name="temperature" value="39" step="0.1" required></label>
+              <label>Relative humidity <span>%</span><input type="number" name="humidity" value="18" min="0" max="100" step="0.1" required></label>
+              <label>Wind speed <span>km/h</span><input type="number" name="wind_speed" value="35" min="0" step="0.1" required></label>
+              <label>Rainfall <span>mm</span><input type="number" name="rainfall" value="0" min="0" step="0.1" required></label>
+              <button class="primary-button full-button" type="submit" id="fire-submit">Run Fire Analysis <span>→</span></button>
+            </form>
+          </div>
+          <div class="result-panel" id="fire-result">
+            <div class="result-placeholder">
+              <div class="placeholder-symbol">✳</div>
+              <h3>Awaiting analysis</h3>
+              <p>Enter environmental values and run an analysis to see the results and Sentinel Agent report.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="view-water">
+        <div class="module-intro">
+          <div class="module-icon large water-icon">≈</div>
+          <div>
+            <div class="eyebrow">ENVIRONMENTAL RISK MODULE / 02</div>
+            <h2>Sentinel Water</h2>
+            <p>Explore preliminary water risk indicators.</p>
+          </div>
+          <span class="module-state active-state">ANALYSIS AVAILABLE</span>
+        </div>
+
+        <div class="analysis-layout">
+          <div class="form-panel">
+            <div class="panel-heading"><h3>Water inputs</h3><span>USER-SUPPLIED DATA</span></div>
+            <form id="water-form">
+              <label>Water level <span>%</span><input type="number" name="water_level" value="90" min="0" step="0.1" required></label>
+              <label>Rainfall <span>mm</span><input type="number" name="rainfall" value="65" min="0" step="0.1" required></label>
+              <label>Turbidity <span>NTU</span><input type="number" name="turbidity" value="120" min="0" step="0.1" required></label>
+              <button class="primary-button full-button" type="submit" id="water-submit">Run Water Analysis <span>→</span></button>
+            </form>
+          </div>
+          <div class="result-panel" id="water-result">
+            <div class="result-placeholder">
+              <div class="placeholder-symbol">✳</div>
+              <h3>Awaiting analysis</h3>
+              <p>Enter water indicators and run an analysis to see the results and Sentinel Agent report.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view prototype-view" id="view-biodiversity">
+        <div class="prototype-visual">❋</div>
+        <div class="eyebrow">ENVIRONMENTAL DOMAIN / 03</div>
+        <h2>Sentinel Biodiversity</h2>
+        <span class="module-state prototype-state">PROTOTYPE · NOT CONNECTED</span>
+        <p>Designed for future ecosystem monitoring and environmental change analysis using geospatial and multi-date satellite evidence.</p>
+        <div class="prototype-note">This module is part of the Sentinel Habitat vision. It is not currently connected to live satellite data or an operational analysis model.</div>
+      </section>
+
+      <section class="view prototype-view" id="view-seismic">
+        <div class="prototype-visual">⌁</div>
+        <div class="eyebrow">ENVIRONMENTAL DOMAIN / 04</div>
+        <h2>Sentinel Seismic</h2>
+        <span class="module-state prototype-state">PROTOTYPE · NOT CONNECTED</span>
+        <p>Designed for future seismic signal analysis and situational awareness after an earthquake begins.</p>
+        <div class="prototype-note">This module is part of the Sentinel Habitat vision. It is not currently connected to seismic stations or a validated detection model. It does not predict earthquakes.</div>
+      </section>
+
+      <footer class="footer">
+        <span>SENTINEL HABITAT · ENVIRONMENTAL INTELLIGENCE</span>
+        <span>PRELIMINARY DEMONSTRATION · NOT AN OFFICIAL WARNING</span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
